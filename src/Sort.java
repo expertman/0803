@@ -1,5 +1,17 @@
 
 public class Sort {
+	void selectionSorting(Student [] array) {
+		for(int i = 0 ; i < array.length - 1 ; i++) {
+			for(int j = i + 1 ; j < array.length ; j++) {
+				if(array[i].tot > array[j].tot) {
+					array[j].ranking++;
+				}else if(array[i].tot < array[j].tot) {
+					array[i].ranking++;
+				}
+			}
+		}
+	}
+	
 	void bubbleSorting(Student [] array) {
 		for(int i = 0 ; i < array.length -1 ; i++) {
 			for(int j = 0 ; j < array.length -1 ; j++) {
